@@ -18,7 +18,11 @@ const defaultConfig = {
 
 // Environment specific overrides
 const environmentConfigs = {
-    development: {},
+    development: {
+        mongo: {
+            uri: process.env.MONGO_URI || 'mongodb://localhost/calendarapi'
+        }
+    },
     test: {
         port: 5678,
         security: {
