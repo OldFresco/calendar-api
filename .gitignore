@@ -35,9 +35,12 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+<<<<<<< HEAD
 
 # VS code settings 
 settings.json
 
 # Build outputs
 build
+=======
+>>>>>>> dd8e10c34cd38fa63f0eeebb3fb3188f5bd1dc0e
