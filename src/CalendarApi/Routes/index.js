@@ -1,5 +1,5 @@
-import MetaController from '../Controllers/metaController'
-import WorkingDayController from '../Controllers/workingDayController'
+import MetaController from '../Controllers/MetaController'
+import WorkingDayController from '../Controllers/WorkingDayController'
 import { Router } from 'express'
 
 const routes = new Router()
