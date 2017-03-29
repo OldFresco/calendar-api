@@ -1,12 +1,12 @@
+import isWeekend from '../../CalendarApi.ApplicationServices/isWeekend';
+
 class WorkingDayController {
     async get(req, res) {
 
-        let currentDate = new Date();
-        let day = currentDate.getDay();
-        let isWeekend = (day === 0 || day === 6);
+        const currentDate = new Date();
         let isHoliday = false;
 
-        if (isWeekend) {
+        if (isWeekend(currentDate)) {
             res.json(404);
         }
         if (isHoliday) {
