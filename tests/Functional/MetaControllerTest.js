@@ -20,7 +20,7 @@ describe('Given a GET /meta request', () => {
                 });
         });
 
-        it('should return an OK health response', (done) => {
+        it('should return a response body with property health value equal to ok', (done) => {
             server
                 .get('/meta')
                 .end((err, res) => {
@@ -35,7 +35,7 @@ describe('Given a GET /meta request', () => {
                 });
         });
 
-        it('should return a description of the service', (done) => {
+        it('should return a response body with property key description', (done) => {
             server
                 .get('/meta')
                 .end((err, res) => {
