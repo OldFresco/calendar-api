@@ -4,7 +4,7 @@ import server from '../TestHelpers/mockServer';
 const expect = chai.expect;
 
 describe('Given a GET /meta request', () => {
-    describe('When handled', () => {
+    describe('When handled \n', () => {
         it('should return json', (done) => {
             server
                 .get('/meta')

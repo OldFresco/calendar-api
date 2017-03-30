@@ -10,12 +10,12 @@ class WorkingDayController {
         const currentDate = new Date();
 
         if (isWeekend(currentDate)) {
-            res.sendStatus(404);
+            res.status(404).json();
         }
         if (await isHoliday(currentDate)) {
-            res.sendStatus(404);
+            res.status(404).json();
         } else {
-            res.sendStatus(200);
+            res.status(200).json();
         }
     }
 }
