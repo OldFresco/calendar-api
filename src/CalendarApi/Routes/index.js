@@ -5,6 +5,6 @@ import { Router } from 'express'
 const routes = new Router()
 
 routes.get('/meta', MetaController.get)
-routes.get('/', WorkingDayController.get)
+routes.get('/workingday', WorkingDayController.get)
 
 export default routes

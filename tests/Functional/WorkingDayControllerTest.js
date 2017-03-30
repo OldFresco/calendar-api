@@ -3,11 +3,11 @@ import server from '../TestHelpers/mockServer';
 
 const expect = chai.expect;
 
-describe('Given a GET / request', () => {
+describe('Given a GET /workingday request', () => {
     describe('When handled and the date is a working day', () => {
         it('should return a 200 OK status code', (done) => {
             server
-                .get('/')
+                .get('/workingday')
                 .end((err, res) => {
                     expect(res)
                         .to
