@@ -35,6 +35,7 @@ export async function getCollection(collectionName) {
         const db = await connection();
         return db.collection(collectionName);
     } catch (err) {
+        // eslint-disable-next-line no-console
         console.log(err);
     }
 }
