@@ -19,12 +19,6 @@ if (!settings.envs.test) {
     app.use(morgan('dev'));
 }
 
-// JSON
-app.use(function(req, res, next) {
-    res.header('Content-Type', 'application/json');
-    next();
-})
-
 // Properly Decode JSON
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -34,6 +28,12 @@ app.use(methodOverride());
 
 // Mount API routes
 app.use('/', routes);
+
+// JSON
+app.use(function(req, res, next) {
+    res.header('Content-Type', 'application/json');
+    next();
+})
 
 // Only use error handler in development
 if (settings.envs.development) {
